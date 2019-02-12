@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="synopsis">Synopsis:</string>
+    <string name="text_release_date">Release date:</string>
+    <string name="menu_filter_most_popular">Most popular</string>
+    <string name="menu_filter_top_rated">Top Rated</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top rated</string>
+    <string name="favourites">Favourites</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="trailers">Trailers</string>
+    <string name="trailer">Trailer</string>
+    <string name="long_text">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</string>
+    <string name="reviews">Reviews</string>
+    <string name="movieDetailTitleExample">Title</string>
+    <string name="movieDetailDateExample">2018-10-10</string>
+
+    <plurals name="numberOfTrailers">
+        <item quantity="one">%d trailer</item>
+        <item quantity="other">%d trailers</item>
+    </plurals>
+
+    <plurals name="numberOfReviews">
+        <item quantity="one">%d review</item>
+        <item quantity="other">%d reviews</item>
+    </plurals>
+</resources>

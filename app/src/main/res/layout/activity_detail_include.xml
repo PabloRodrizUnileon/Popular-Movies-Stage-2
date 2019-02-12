@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fab_set_favourite"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/movieDetailTitleExample" />
+
+    <ImageButton
+        android:id="@+id/fab_set_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_favorite_black_24dp"
+        tools:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@id/text_view_detail_release_date"
+        app:layout_constraintLeft_toRightOf="@id/text_view_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_view_title"
+        tools:ignore="RtlHardcoded" />
+
+
+    <TextView
+        android:id="@+id/text_view_detail_release_date"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/text_view_title"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title"
+        tools:text="@string/movieDetailDateExample"
+
+        />
+
+    <TextView
+        android:id="@+id/text_view_detail_synopsis"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/text_view_detail_release_date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_detail_release_date"
+        tools:text="@string/long_text"
+        />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:max="10"
+        android:numStars="5"
+        android:stepSize="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_detail_synopsis"
+        app:layout_constraintBottom_toTopOf="@id/trailer_separator"
+        />
+
+    <View
+        android:id="@+id/trailer_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        app:layout_constraintBottom_toTopOf="@id/tv_trailer_header"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_trailer_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/trailers"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trailer_separator"
+        app:layout_constraintBottom_toTopOf="@id/rvTrailers"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:padding="8dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTrailers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_trailer_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:listitem="@layout/trailer_item"
+        />
+
+    <View
+        android:id="@+id/reviews_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvTrailers"
+        app:layout_constraintBottom_toTopOf="@id/tv_reviews_header"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/tv_reviews_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/reviews"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reviews_separator"
+        app:layout_constraintBottom_toTopOf="@id/rvReviews"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:padding="8dp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_reviews_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/review_item"
+        />
+
+</android.support.constraint.ConstraintLayout>
